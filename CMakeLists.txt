@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0)
 project(rholmes LANGUAGES C)
 
 if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release)
+  set(CMAKE_BUILD_TYPE Debug)
 endif()
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -25,3 +25,7 @@ include_directories(${CURL_INCLUDE_DIRS})
 add_executable(rholmes ${SOURCE_FILES} ${HEADER_FILES})
 
 target_link_libraries(rholmes ${CURL_LIBRARIES})
+
+message(STATUS ${CMAKE_INSTALL_PREFIX})
+
+install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX})
