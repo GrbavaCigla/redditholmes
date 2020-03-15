@@ -1,5 +1,6 @@
 #include <ctype.h>
 #include <curl/curl.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -122,6 +123,8 @@ int main(int argc, char **argv) {
 
     cJSON *post = NULL;
 
+    bool found = false;
+
     cJSON_ArrayForEach(post, json) {
         cJSON *data = cJSON_GetObjectItemCaseSensitive(post, "data");
         data = cJSON_GetObjectItemCaseSensitive(data, "subreddit");
@@ -131,14 +134,19 @@ int main(int argc, char **argv) {
         if (searched != -1) {
             times[searched]++;
             sum++;
+            found = true;
         }
     }
 
-    for (int i = 0; i < SUBREDDIT_COUNT; i++) {
-        if (times[i] != 0) {
-            float precent = (float)times[i] / sum * 100;
-            printf("%s %.2f%%", countries[i], precent);
+    if (found) {
+        for (int i = 0; i < SUBREDDIT_COUNT; i++) {
+            if (times[i] != 0) {
+                float precent = (float)times[i] / sum * 100;
+                printf("%s %.2f%%\n", countries[i], precent);
+            }
         }
+    } else {
+        printf("This user is not member of any country subreddit or doesn't exist. If this is not true, raise an issue on github.");
     }
 
     cJSON_Delete(json);
