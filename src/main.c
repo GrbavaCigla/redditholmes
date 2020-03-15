@@ -97,7 +97,7 @@ char *get(char *url) {
 int main(int argc, char **argv) {
     if (argc != 2) {
         puts("./rholmes [username]\n");
-        exit(1);
+        return 1;
     }
 
     int new_size = strlen(*(argv + 1)) + 34;
@@ -147,6 +147,7 @@ int main(int argc, char **argv) {
         }
     } else {
         printf("This user is not member of any country subreddit or doesn't exist. If this is not true, raise an issue on github.");
+        return 1;
     }
 
     cJSON_Delete(json);
