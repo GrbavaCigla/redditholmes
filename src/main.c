@@ -124,13 +124,13 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    int new_size = strlen(*(argv + 1)) + 34;
+    int new_size = strlen(*(argv + 1)) + 44;
 
     char *url = (char *)malloc(new_size);
 
     strcpy(url, "https://www.reddit.com/user/");
     strcat(url, *(argv + 1));
-    strcat(url, ".json");
+    strcat(url, ".json?limit=101");
 
     char *text = get(url);
 
