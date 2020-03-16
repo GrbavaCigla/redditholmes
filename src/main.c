@@ -6,10 +6,10 @@
 #include <string.h>
 #include "cJSON.h"
 
-#define SUBREDDIT_COUNT 198
+#define SUBREDDIT_COUNT 200
 
-char *countries[SUBREDDIT_COUNT] = {"United Arab Emirates", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antiqua & Deps", "United Arab Emirates", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bosna and Herzegovina", "Bolivia", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech", "Denmark", "Djibouti", "Dominica", "Dominican", "Ecuador", "Egypt", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Papau New Guinea", "Pakistan", "Palau", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "San Marino", "Romania", "Russia", "Rwanda", "Saint Vincent & the Grenadines", "Samoa", "San Marino", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "d Srpska", "St Kitts & Nevis", "st Lucia", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "United Arab Emirates", "USA", "Uganda", "Ukraine", "United Arab Emirates", "UnitedKingdom", "USA", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"};
-char *subreddit[SUBREDDIT_COUNT] = {"Abudhabi", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "AntiguaBarbuda", "Arabs", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "BiH", "Bolivia", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "CapeVerde", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "CostaRica", "Costa_Rica", "Croatia", "Cuba", "Cyprus", "Czech", "Denmark", "Djibouti", "Dominica", "Dominican", "Ecuador", "Egypt", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "IvoryCoast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "MarshallIslands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "NewZealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "PNG", "Pakistan", "Palau", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "RepubblicaDiSanMarino", "Romania", "Russia", "Rwanda", "Saintvincent", "Samoa", "SanMarino", "San_Marino", "SaoTomePrincipe", "SaudiArabia", "Senegal", "Serbia", "Seychelles", "SierraLeone", "Singapore", "Slovakia", "Slovenia", "Solomon_Islands", "Somalia", "SouthAfrica", "SouthSudan", "Spain", "SriLanka", "Srpska", "StKitts", "StLucia", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor", "Togo", "Tonga", "TrinidadandTobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "UAE", "USA", "Uganda", "Ukraine", "UnitedArabEmirates", "UnitedKingdom", "UnitedStatesOfAmerica", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"};
+char *countries[SUBREDDIT_COUNT] = {"United Arab Emirates", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antiqua & Deps", "United Arab Emirates", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bosnia and Herzegovina", "Bolivia", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech", "Denmark", "Djibouti", "Dominica", "Dominican", "Ecuador", "Egypt", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Papau New Guinea", "Pakistan", "Palau", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "San Marino", "Romania", "Russia", "Rwanda", "Saint Vincent & the Grenadines", "Samoa", "San Marino", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Republika Srpska", "St Kitts & Nevis", "st Lucia", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "United Arab Emirates", "USA", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "USA", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe", "Wales", "Scotland"};
+char *subreddit[SUBREDDIT_COUNT] = {"Abudhabi", "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "AntiguaBarbuda", "Arabs", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "BiH", "Bolivia", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "CapeVerde", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "CostaRica", "Costa_Rica", "Croatia", "Cuba", "Cyprus", "Czech", "Denmark", "Djibouti", "Dominica", "Dominican", "Ecuador", "Egypt", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "IvoryCoast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "MarshallIslands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "NewZealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "PNG", "Pakistan", "Palau", "Panama", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "RepubblicaDiSanMarino", "Romania", "Russia", "Rwanda", "Saintvincent", "Samoa", "SanMarino", "San_Marino", "SaoTomePrincipe", "SaudiArabia", "Senegal", "Serbia", "Seychelles", "SierraLeone", "Singapore", "Slovakia", "Slovenia", "Solomon_Islands", "Somalia", "SouthAfrica", "SouthSudan", "Spain", "SriLanka", "Srpska", "StKitts", "StLucia", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor", "Togo", "Tonga", "TrinidadandTobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "UAE", "USA", "Uganda", "Ukraine", "UnitedArabEmirates", "UnitedKingdom", "UnitedStatesOfAmerica", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe", "Wales", "Scotland"};
 int times[SUBREDDIT_COUNT] = {0};
 int sum = 0;
 
@@ -18,15 +18,15 @@ struct url_data {
     char *data;
 };
 
-int count(char *arr[], char *x, int n) {
-    int result = 0;
-    for (int i = 0; i < n; i++) {
-        if (strcasecmp(arr[i], x) == 0) {
-            result++;
-        }
-    }
-    return result;
-}
+// int count(char *arr[], char *x, int n) {
+//     int result = 0;
+//     for (int i = 0; i < n; i++) {
+//         if (strcasecmp(arr[i], x) == 0) {
+//             result++;
+//         }
+//     }
+//     return result;
+// }
 
 int search(char *arr[], char *x, int n) {
     for (int i = 0; i < n; i++) {
@@ -60,6 +60,30 @@ size_t write_data(void *ptr, size_t size, size_t nmemb, struct url_data *data) {
     data->data[data->size] = '\0';
 
     return size * nmemb;
+}
+
+int find(char *text, char *to_find) {
+    int index = 0;
+    int result = -1;
+    int temp_res = -1;
+    int text_len = strlen(text);
+    int find_len = strlen(to_find);
+
+    for (int i = 0; i < text_len; i++) {
+        if (tolower(to_find[index]) == tolower(text[i])) {
+            index++;
+            if (temp_res == -1) {
+                temp_res = i;
+            }
+            if (index == find_len) {
+                result = temp_res;
+            }
+        } else if (temp_res != -1) {
+            temp_res = -1;
+            index = 0;
+        }
+    }
+    return result;
 }
 
 char *get(char *url) {
@@ -123,22 +147,34 @@ int main(int argc, char **argv) {
 
     cJSON *post = NULL;
 
-    bool found = false;
+    bool valid = false;
 
     cJSON_ArrayForEach(post, json) {
         cJSON *data = cJSON_GetObjectItemCaseSensitive(post, "data");
-        data = cJSON_GetObjectItemCaseSensitive(data, "subreddit");
-        char *subreddit_name = data->valuestring;
+        cJSON *subreddit_raw = cJSON_GetObjectItemCaseSensitive(data, "subreddit");
+        cJSON *author_flair_text_raw = cJSON_GetObjectItemCaseSensitive(data, "author_flair_text");
+        char *subreddit_name = subreddit_raw->valuestring;
+        char *author_flair_text = author_flair_text_raw->valuestring;
 
         int searched = search(subreddit, subreddit_name, SUBREDDIT_COUNT);
+
+        if (author_flair_text != NULL) {
+            for (int i = 0; i < SUBREDDIT_COUNT; i++) {
+                int index = find(author_flair_text, countries[i]);
+                if (index != -1) {
+                    times[i]++;
+                    sum++;
+                    valid = true;
+                }
+            }
+        }
         if (searched != -1) {
             times[searched]++;
             sum++;
-            found = true;
+            valid = true;
         }
     }
-
-    if (found) {
+    if (valid) {
         for (int i = 0; i < SUBREDDIT_COUNT; i++) {
             if (times[i] != 0) {
                 float precent = (float)times[i] / sum * 100;
@@ -146,7 +182,7 @@ int main(int argc, char **argv) {
             }
         }
     } else {
-        printf("This user is not member of any country subreddit or doesn't exist. If this is not true, raise an issue on github.");
+        printf("This user is has no signature of any country or doesn't exist. If this is not true, raise an issue on github.");
         return 1;
     }
 
