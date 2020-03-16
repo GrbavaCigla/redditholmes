@@ -10,6 +10,7 @@ _Quick side-project, you give it the reddit user, it gives you the information. 
 `$ apt install curl cmake gcc`
 
 ### Compile
+If you don't have curl installed add -DBUILD_CURL=On
 ```bash
 mkdir build
 cd build
