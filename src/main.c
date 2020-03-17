@@ -18,16 +18,6 @@ struct url_data {
     char *data;
 };
 
-// int count(char *arr[], char *x, int n) {
-//     int result = 0;
-//     for (int i = 0; i < n; i++) {
-//         if (strcasecmp(arr[i], x) == 0) {
-//             result++;
-//         }
-//     }
-//     return result;
-// }
-
 int search(char *arr[], char *x, int n) {
     for (int i = 0; i < n; i++) {
         if (strcasecmp(arr[i], x) == 0) {
