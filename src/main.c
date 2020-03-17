@@ -190,6 +190,6 @@ int main(int argc, char **argv) {
     cJSON_Delete(post);
 
     free(url);
-
+    free(text);
     return 0;
 }
