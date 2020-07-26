@@ -36,13 +36,6 @@ Output:
 ```
 Serbia 100.00%
 ```
-## TODO
-Add more tools:
-
-1. rkill for karma kill
-2. rgood for karma upvote
-3. rholmes for all information
-4. rnation for nationality
 
 ## Credits
 Made by [Aleksa Ognjanovic](https://github.com/GrbavaCigla/)
