@@ -37,4 +37,4 @@ else()
   target_link_libraries(rholmes ${CURL_LIBRARIES})
 endif()
 
-install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX})
+install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
