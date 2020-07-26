@@ -5,9 +5,11 @@ _Quick side-project, you give it the reddit user, it gives you the information. 
 ## Installation
 ### Requirement
 #### ArchLinux
-`$ pacman -S curl cmake gcc`
+`# pacman -S curl cmake gcc`
 #### Debian
-`$ apt install curl cmake gcc`
+`# apt install curl cmake gcc`
+#### Gentoo
+`# emerge net-misc/curl sys-devel/gcc dev-util/cmake`
 
 ### Compile
 If you don't have curl installed add -DBUILD_CURL=On
